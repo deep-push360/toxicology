@@ -2,13 +2,7 @@
 
 **Created by**: Kayode Olaleye
 
-<<<<<<< HEAD
 **Purpose**: This is where any member of DeepPush or its subgroup can submit a request for a service any other member or subgroup.
-=======
-Purpose: This is where any member of DeepPush or its subgroup can submit a request for a service any other member or subgroup.
-
-SOP: To submit a request to this file, use the following format:
->>>>>>> e79bd53829336d9b395ff340bd50c960585fe346
 
 **SOP**: To submit a request to this file, use the following format:
 
@@ -46,9 +40,5 @@ def data_generator(dataset, ...):
 
 _Cheers_
 
-<<<<<<< HEAD
 END REQUEST
 ------------------------------
-=======
----------------------------END REQUEST-------------------------------------
->>>>>>> e79bd53829336d9b395ff340bd50c960585fe346
