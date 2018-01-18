@@ -2,11 +2,11 @@
 
 **Created by**: Kayode Olaleye
 
-**Purpose**: This is where any member of DeepPush or its subgroup can submit a request for a service any other member or subgroup.
+**Purpose**: This is where any member of DeepPush or its subgroup can submit a request for a service from any other member or subgroup.
 
-**SOP**: To submit a request to this file, use the following format:
+**SOP**: To include a request on this file, use the following format:
 
-BEGIN REQUEST
+Begin request
 ---------------------
 
 **Request Submitted by**: Kayode Olaleye
@@ -19,13 +19,14 @@ BEGIN REQUEST
 
 **Response due**: 22-JAN-2018:04:00pm
 
-**DETAILS**:
+**Details**:
 --------------
 To train a model, the following is required.
 
 - Dataset: training set, test set and validation set.
-- Validation set is not provided by the owner of the competition. Hence, a 0.1 split of the training set can be made.
+- Validation set is not provided by the owner of the competition. Hence, a 0.1+ split of the training set can be made.
 - A function named `data_generator` (or any other descriptive name) that preprocesses the dataset and outputs a list of **comments**: x and their corresponding **classes**: y. Where x is a list and y is a numpy array of **one-hot** vectors. 
+
 Example:
 
 ```python
@@ -40,5 +41,5 @@ def data_generator(dataset, ...):
 
 _Cheers_
 
-END REQUEST
+End request
 ------------------------------
