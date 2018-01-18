@@ -3,6 +3,7 @@ Created on: 18-JAN-2018:03:57am
 Created by: Kayode Olaleye
 
 Purpose: This is where any member of DeepPush or its subgroup can submit a request for a service any other member or subgroup.
+
 SOP: To submit a request to this file, use the following format:
 
 ------------------------BEGIN REQUEST------------------------------
@@ -36,4 +37,5 @@ def data_generator(dataset, ...):
 **Important**: Training a model is an iterative process and usually require  arbitrary back-and-forth moving between data preprocessing and experimentation so bear in mind that we can make more requests after the first is served and tested.
 
 _Cheers_
+
 ---------------------------END REQUEST-------------------------------------
