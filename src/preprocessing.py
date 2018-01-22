@@ -1,1 +1,4 @@
-"""Contributors: """
+"""Contributors: Samuel Mensah"""
+
+def add(a,b):
+	return a+b
