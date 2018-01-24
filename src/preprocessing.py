@@ -1,5 +1,17 @@
 """Contributors: Zoe Hamel, Samuel Mensah"""
 
+def clean_punctuation(dataset):
+   """
+   a function that removes all punctuation
+   """
+   
+   # remove punctuation
+   dataset['comment_text'] = [re.sub('[^\w\s]|(\n)',' ', i) for i in dataset['comment_text']]
+
+   return dataset
+
+
+
 def data_generator(dataset):
     """
    a function to return x and y
@@ -7,9 +19,8 @@ def data_generator(dataset):
    x = list of comments
    y = a one hot vector of the classes
    """
-
-    # remove punctuation
-    dataset['comment_text'] = [re.sub('[^\w\s]|(\n)',' ', i) for i in dataset['comment_text']]
+    # get clean data
+    dataset = clean_punctuation(dataset)    
 
     # create list and array
     x = list(dataset['comment_text'])
