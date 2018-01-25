@@ -1,4 +1,8 @@
-"""Contributors: Zoe Hamel, Samuel Mensah"""
+"""Contributors: Zoe Hamel, Samuel Mensah
+
+***IMPORTANT**
+Use 
+"""
 
 def clean_punctuation(dataset):
    """
@@ -27,3 +31,5 @@ def data_generator(dataset):
     y = np.array(dataset.iloc[:,2:])
     
     return[x,y]
+
+data_generator('/home/kayode/KAYODE/Toxic_Kaggle/tain.csv')
