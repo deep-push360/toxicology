@@ -1,14 +1,12 @@
 """Contributors: Zoe Hamel, Samuel Mensah"""
 
 def clean_punctuation(dataset):
-   """
-   a function that removes all punctuation
-   """
-   
-   # remove punctuation
-   dataset['comment_text'] = [re.sub('[^\w\s]|(\n)',' ', i) for i in dataset['comment_text']]
-
-   return dataset
+    """
+    a function that removes all punctuation
+    """
+    # remove punctuation
+    dataset['comment_text'] = [re.sub('[^\w\s]|(\n)',' ', i) for i in dataset['comment_text']]
+    return dataset
 
 
 
