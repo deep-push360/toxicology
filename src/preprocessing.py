@@ -1,8 +1,8 @@
-"""Contributors: Zoe Hamel, Samuel Mensah
-
-***IMPORTANT**
-Use 
+"""Contributors: Zoe Hamel, Samuel Mensah, Kayode Olaleye
 """
+import pandas as pd
+import re
+import numpy as np
 
 def clean_punctuation(dataset):
    """
@@ -19,8 +19,6 @@ def clean_punctuation(dataset):
    dataset['comment_text'] = [re.sub('[^\w\s]|(\n)',' ', i) for i in dataset['comment_text']]
 
    return dataset
-
-
 
 def data_generator(dataset):
     """
@@ -39,4 +37,4 @@ def data_generator(dataset):
     
     return[x,y]
 
-data_generator('/home/kayode/KAYODE/Toxic_Kaggle/tain.csv')
+data_generator('/home/kayode/KAYODE/PROJECTS/Toxic_Kaggle/train.csv')
