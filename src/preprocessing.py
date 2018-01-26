@@ -5,19 +5,18 @@ import re
 import numpy as np
 
 def clean_punctuation(csv_file):
-   """
+    """
    a helper function that removes all punctuation
    this function takes in dataset as argument.
    where dataset is a csv file
    """
-
-   dataset = pd.read_csv(csv_file)
+    
+    dataset = pd.read_csv(csv_file)
    
     # remove punctuation
     # a list comprehension to remove punctuations
     dataset['comment_text'] = [re.sub('[^\w\s]|(\n)',' ', i) for i in dataset['comment_text']]
-
-
+    
     return dataset
 
 def data_generator(csv_file):
@@ -34,7 +33,9 @@ def data_generator(csv_file):
    y = a one hot vector of the classes
    """
     # get clean data: applying the function clean_punctuation
-    dataset = clean_punctuation(csv_file)    
+    dataset = clean_punctuation(csv_file)
+    dataset['Clean'] = np.where((dataset['toxic']==0) & (dataset['insult']==0) & (dataset['identity_hate']==0) 
+             & (dataset['obscene']==0) & (dataset['severe_toxic']==0) & (dataset['threat']==0), 1, 0)    
 
     # create list and array
     x = list(dataset['comment_text'])
