@@ -1,4 +1,4 @@
-"""Contributors: Zoe Hamel, Samuel Mensah
+"""Contributors: Zoe Hamel, Samuel Mensah, Buri Gershom
 """
 import pandas as pd
 import re
