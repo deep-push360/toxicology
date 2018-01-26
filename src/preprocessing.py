@@ -1,4 +1,4 @@
-"""Contributors: Zoe Hamel, Samuel Mensah, Kayode Olaleye
+"""Contributors: Zoe Hamel, Samuel Mensah
 """
 import pandas as pd
 import re
@@ -37,7 +37,8 @@ def data_generator(csv_file):
     # create list and array
     x = list(dataset['comment_text'])
     y = np.array(dataset.iloc[:,2:])
-    
-    return[x,y]
+    print('x: {}, y: {}'.format(x,y))
+    return [x,y]
 
-#data_generator('/home/kayode/KAYODE/PROJECTS/Toxic_Kaggle/train.csv')
+if __name__== "__main__":
+    data_generator('/home/kayode/KAYODE/PROJECTS/Toxic_Kaggle/train.csv')
