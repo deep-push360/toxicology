@@ -5,19 +5,18 @@ import re
 import numpy as np
 
 def clean_punctuation(csv_file):
-   """
+    """
    a helper function that removes all punctuation
    this function takes in dataset as argument.
    where dataset is a csv file
    """
-
-   dataset = pd.read_csv(csv_file)
+    
+    dataset = pd.read_csv(csv_file,header=None, delim_whitespace=True)
    
     # remove punctuation
     # a list comprehension to remove punctuations
     dataset['comment_text'] = [re.sub('[^\w\s]|(\n)',' ', i) for i in dataset['comment_text']]
-
-
+    
     return dataset
 
 def data_generator(csv_file):
@@ -42,5 +41,3 @@ def data_generator(csv_file):
     print('x: {}, y:{}'.format(x,y))
     return [x,y]
 
-if __name__ == '__main__':
-	data_generator('/home/samuelmensah/THIS_COMPUTER/Disk_Space/Kaggle/train.csv')
