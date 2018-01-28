@@ -11,11 +11,8 @@ def clean_punctuation(csv_file):
    where dataset is a csv file
    """
     
-<<<<<<< HEAD
-    dataset = pd.read_csv(csv_file,header=None, delim_whitespace=True)
-=======
     dataset = pd.read_csv(csv_file)
->>>>>>> f288c6bfda373d190304f6df25a56d68d993ef0e
+
    
     # remove punctuation
     # a list comprehension to remove punctuations
