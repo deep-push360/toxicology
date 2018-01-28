@@ -1,4 +1,4 @@
-"""Contributors: Zoe Hamel, Samuel Mensah
+"""Contributors: Zoe Hamel, Samuel Mensah, Buri Gershom
 """
 import pandas as pd
 import re
@@ -11,7 +11,11 @@ def clean_punctuation(csv_file):
    where dataset is a csv file
    """
     
+<<<<<<< HEAD
     dataset = pd.read_csv(csv_file,header=None, delim_whitespace=True)
+=======
+    dataset = pd.read_csv(csv_file)
+>>>>>>> f288c6bfda373d190304f6df25a56d68d993ef0e
    
     # remove punctuation
     # a list comprehension to remove punctuations
@@ -33,7 +37,9 @@ def data_generator(csv_file):
    y = a one hot vector of the classes
    """
     # get clean data: applying the function clean_punctuation
-    dataset = clean_punctuation(csv_file)    
+    dataset = clean_punctuation(csv_file)
+    dataset['Clean'] = np.where((dataset['toxic']==0) & (dataset['insult']==0) & (dataset['identity_hate']==0) 
+             & (dataset['obscene']==0) & (dataset['severe_toxic']==0) & (dataset['threat']==0), 1, 0)    
 
     # create list and array
     x = list(dataset['comment_text'])
