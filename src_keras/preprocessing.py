@@ -40,8 +40,4 @@ def data_generator(csv_file):
     # create list and array
     x = list(dataset['comment_text'])
     y = np.array(dataset.iloc[:,2:])
-    print('x: {}, y:{}'.format(x,y))
     return [x,y]
-
-if __name__ == '__main__':
-	data_generator('/home/samuelmensah/THIS_COMPUTER/Disk_Space/Kaggle/train.csv')
