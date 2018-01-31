@@ -12,7 +12,6 @@ def clean_punctuation(csv_file):
    """
     
     dataset = pd.read_csv(csv_file)
-
    
     # remove punctuation
     # a list comprehension to remove punctuations
@@ -41,6 +40,4 @@ def data_generator(csv_file):
     # create list and array
     x = list(dataset['comment_text'])
     y = np.array(dataset.iloc[:,2:])
-    print('x: {}, y:{}'.format(x,y))
     return [x,y]
-
