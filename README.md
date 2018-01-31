@@ -13,6 +13,7 @@ We are attempting to build a model that’s capable of detecting different types
 
 In attempting to building a model which reduces the negative effect of toxic comments online, we will need data. We will need training, testing and validation data. The input for our model is suppose to be in the format as illustration  below. 
 
+
 ```[['Deep push makes deep learning interesting',
   'keep working hard',
   'we are interestingly working hard',
@@ -21,6 +22,7 @@ array([[1,0,0,0,0,0,0],
        [1,0,1,0,0,0,0],
        ...,
        [0,1,1,0,0,0,0]])]```
+
 
 The format is a list of comments and their corresponding classes. The comments is a list and the classes is an array of one-hot vectors.
 
