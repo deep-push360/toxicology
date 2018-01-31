@@ -14,7 +14,9 @@ We are attempting to build a model that’s capable of detecting different types
 In attempting to building a model which reduces the negative effect of toxic comments online, we will need data. We will need training, testing and validation data. The input for our model is suppose to be in the format as illustration  below. 
 
 `[['comment1',`
+$\\$
 $\,$`'comment2',`
+$\\$
 $\,$`'comment3',`
 $\quad$ `...],`
 `array([[1,0,0,0,0,0,0],`
