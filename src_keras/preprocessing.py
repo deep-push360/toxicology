@@ -16,7 +16,8 @@ def clean_punctuation(csv_file):
    
     # remove punctuation
     # a list comprehension to remove punctuations
-    dataset['comment_text'] = [re.sub('[^\w\s]|(\n)',' ', i) for i in dataset['comment_text']]
+    dataset['comment_text'] = [re.sub('[^\w\s\']|(\n)',' ', i) for i in dataset['comment_text']]
+    dataset['comment_text'] = [re.sub( '\s+', ' ', i).strip() for i in dataset['comment_text']]
     
     return dataset
 
