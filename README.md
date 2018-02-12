@@ -27,7 +27,7 @@ array([[1,0,0,0,0,0,0],
 
 The format is a list of comments and their corresponding classes. The comments is a list and the classes is an array of one-hot vectors.
 
-It is necessary for every data to be explored. Exploratory Data Analysis in for this challenge will be very useful technique as it can help summarise important characters that the model cannot detect. Mostly this is achieved with the help of visualisation techiques. 
+It is necessary for every data to be explored. Exploratory Data Analysis in for this challenge will be very useful technique as it can help summarise important characters that the model cannot detect. Mostly, this is achieved with the help of visualisation techniques. 
 
 The data should be clean as possible. This is because, some comments include a lot punctuation marks which may have been because the commentor was angry at the time he/she was making the comment. To do this, we write functions that make the data clean, and generate the input for the model.
 
