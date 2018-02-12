@@ -4,6 +4,26 @@ import pandas as pd
 import re
 import numpy as np
 
+def check_NaN(csv_file):
+    """
+    a helper function to help check whether there are missing data.
+    this function takes in a dataset as argument
+    where dataset is a csv file
+    """
+    #reading the dataset using pandas
+    dataset = pd.read_csv(csv_file)
+    
+    # replace all missing id's with "This id is missing"
+    dataset['id'].fillna("This id is missing", inplace = True)
+    
+    # replace all missing comments's with "This comment is missing"
+    dataset['comment_text'].fillna("This comment is missing", inplace = True)
+    
+    # replace missing labels with 0
+    dataset.iloc[:, 2:].fillna(0, inplace = True)
+    
+    return dataset
+
 def clean_punctuation(csv_file):
     """
    a helper function that removes all punctuation
