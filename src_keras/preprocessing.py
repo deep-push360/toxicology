@@ -63,4 +63,3 @@ def data_generator(csv_file):
     x = list(dataset['comment_text'])
     y = np.array(dataset.iloc[:,2:])
     return [x,y]
-
